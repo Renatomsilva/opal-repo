@@ -4,6 +4,7 @@ import rego.v1
 
 default allow := false
 default allow_data := false
+default allow_data_if := false
 
 allow if {
 	count(violation) == 0
