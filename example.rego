@@ -4,7 +4,7 @@ import rego.v1
 
 default allow := false
 default allow_data := false
-default allow_data_if := false
+
 
 allow if {
 	count(violation) == 0
@@ -14,9 +14,6 @@ allow_data if {
 	count(violation_data) == 0
 }
 
-allow_data_if if {
-	count(violation_data) == 0
-}
 
 
 violation contains server.id if {
