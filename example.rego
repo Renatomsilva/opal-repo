@@ -13,6 +13,10 @@ allow_data if {
 	count(violation_data) == 0
 }
 
+allow_data_if if {
+	count(violation_data) == 0
+}
+
 
 violation contains server.id if {
 	some server
